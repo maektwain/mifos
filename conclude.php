@@ -21,12 +21,9 @@
 	<script type="text/javascript" src="http://danielcrisp.github.io/angular-rangeslider/angular.rangeSlider.js"></script>
 	<style>
 		.star-cb-group {
-		  /* remove inline-block whitespace */
 		  font-size: 0;
-		  /* flip the order so we can use the + and ~ combinators */
 		  unicode-bidi: bidi-override;
 		  direction: rtl;
-		  /* the hidden clearer */
 		}
 		.star-cb-group * {
 		  font-size: 1rem;
@@ -35,7 +32,6 @@
 		  display: none;
 		}
 		.star-cb-group > input + label {
-		  /* only enough room for the star */
 		  display: inline-block;
 		  overflow: hidden;
 		  text-indent: 9999px;
@@ -105,9 +101,6 @@ $loanId = $_REQUEST['loanId'];
 						<select id="genderId" ng-model="putClient.genderId" ng-options="gender.id as gender.name for gender in genderOpt" class="form-control input-lg">
 							<option value="">Select Gender</option>		
 						</select>
-						<!-- <div class="alert alert-danger" style="background-color:#FF4B4B" ng-if="dobErr">
-	                    	<p style="color:#fff">{{emailErr}}</p>
-	                    </div> -->
 					</div>
 					<div class="form-group">
 						<label class="control-label" for="father">Marital Status</label>
