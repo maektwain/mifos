@@ -4,21 +4,13 @@
 
 		$scope.esgol = 0;
 
-		/**
-		* Mifox API URL and credentials
-		**/
 		$scope.url = "https://control.decimus.in:8443/mifosng-provider/api/v1/";
 
-		/**
-		* API details of nexmo to send sms
-		**/
+		
 		$scope.nexmoUrl = "https://rest.nexmo.com/sms/json";
 		$scope.nexmoAPIKey = "992e64c6";
 		$scope.nexmoAPISecret = "7fec7f12";
 		
-		/**
-		* Making the very first call to mifos engine to aunthenticate the user
-		**/
 		$http({
 			url: "api-secret.php",
 			method: "GET",
@@ -65,9 +57,6 @@
 			console.log('Error');
 		});
 
-        /**
-        * Json data which going to hold the values of client
-        **/
         $scope.jsonData = {
         	officeId: '',
         	firstname: '',
@@ -85,7 +74,6 @@
 
 		$scope.proceedOne = function() {
 			
-			/*** Convert Date to exact format which is used in API  ***/
 			var months = Array('January','February','March','April','May','June','July','August','September','October','November','December');
 			var date = new Date($scope.mustBeTeen);
 			var day = date.getDate();
@@ -129,7 +117,6 @@
 					});
 				}
 
-				/*** animate forms ***/
 				$('#createCli').addClass('hide');
 				$('#otpGen').removeClass('hide');
 				$('#otpGen').addClass('bounceInRight animated');
@@ -178,30 +165,10 @@
 		}
 		$scope.proceedTwo = function() {
 			
-			// $scope.jsonData.code
-
-			/*$http({
-				url: $scope.url + "clients?tenantIdentifier=default&pretty=true",
-				method: "GET",
-				datatype: "json",
-				cache : false,
-				headers: {
-					'Authorization': 'Basic ' + $scope.basicAuthKey,
-					'Content-Type': 'application/json; charset=UTF-8'
-				}
-			}).
-			success(function(data, status, headers, config) {
-				console.log(data, status, headers);
-			}).
-			error(function(data, status, headers, config) {
-				console.log('Error');
-			});*/
-			/*** animate forms ***/
 			$('#otpGen').addClass('hide');
 			$('#chosenOne').removeClass('hide');
 			$('#chosenOne').addClass('bounceInRight animated');
 
-			/** Changing Current Tabs **/
 			$('#detLoan').removeClass('lap-now');
 			$('#detLoan').addClass('lap-finish');
 			$('#calcLoan').addClass('lap-now');
@@ -223,7 +190,6 @@
 			{name:'12 Months', value: 12}
 	    ];
 
-	    // $scope.defMonth = $scope.monthsLs[11];
 
 	    $scope.wenrel = [
 			'Today',
@@ -364,15 +330,6 @@
 				console.log('Error');
 			});
 
-			/* 	Formula 
-					A = P(1 + rt)
-					Here Two Wheeler percentage per annum is 0.15
-					for eg:-
-					A is the principal amount of two wheeler
-					A = 100000(1 + (0.15 × 1))
-			*/
-
-			/*** animate forms ***/
 			$('#chosenOne').addClass('hide');
 			$('#elAmount').removeClass('hide');
 			$('#elAmount').addClass('bounceInRight animated');
@@ -380,8 +337,6 @@
 
 		$scope.proceedFour = function() {
 
-
-			/** Changing Current Tabs **/
 			$('#calcLoan').removeClass('lap-now');
 			$('#calcLoan').addClass('lap-finish');
 			$('#panEn').addClass('lap-now');
@@ -410,7 +365,6 @@
 
 	    $scope.createPanDoc = function() {
 	    	Upload.upload({
-            	//url: $scope.url + "clients/" + $scope.clientDetails.clientId + "/documents?tenantIdentifier=default&pretty=true",
             	url: $scope.url + "clients/" + $scope.clientDetails.clientId + "/documents?tenantIdentifier=default&pretty=true",
                 fields: {name: $scope.panNumber},
                 file: $scope.file,
@@ -552,9 +506,6 @@
 
 		$scope.proceedSix = function() {
 
-
-
-			/** Update Client Details **/
 			$http({
 				url: $scope.url + "clients/" + $scope.clientDetails.clientId + "?tenantIdentifier=default&pretty=true",
 				method: "PUT",
@@ -573,28 +524,8 @@
 				console.log(data, status, headers, config);
 			});
 			
-			/** Update Client Salary details **/
-			/*$http({
-				url: $scope.url + "datatables/Official/" + $scope.clientDetails.clientId + "?genericResultSet=true?tenantIdentifier=default&pretty=true",
-				method: "PUT",
-				datatype: "json",
-				data: {"columnValues" : $scope.grossId},
-				cache : false,
-				headers: {
-					'Authorization': 'Basic ' + $scope.basicAuthKey,
-					'Content-Type': 'application/json; charset=UTF-8'
-				}
-			}).success(function(data, status, headers, config) {
-				console.log(data, status, headers);
-			}).
-			error(function(data, status, headers, config) {
-				console.log('Error');
-				console.log(data, status, headers, config);
-			});*/
-			
 			
 
-			/** Upload Client Picture **/
 			Upload.upload({
             	url: $scope.url + "clients/" + $scope.clientDetails.clientId + "/images?tenantIdentifier=default&pretty=true",
                 file: $scope.picture,
@@ -608,9 +539,7 @@
 				console.log('Error');
 			});
 
-			/** Upload Client Bank Statement **/
 			Upload.upload({
-            	//url: $scope.url + "clients/" + $scope.clientDetails.clientId + "/documents?tenantIdentifier=default&pretty=true",
             	url: $scope.url + "clients/" + $scope.clientDetails.clientId + "/documents?tenantIdentifier=default&pretty=true",
                 fields: {name: 'Bank Statement'},
                 file: $scope.statement,
@@ -628,7 +557,6 @@
 			$('#officialAddre').removeClass('hide');
 			$('#officialAddre').addClass('bounceInRight animated');
 
-			/** Changing Current Tabs **/
 			$('#proDet').removeClass('lap-now');
 			$('#proDet').addClass('lap-finish');
 			$('#CustDet').addClass('lap-now');
@@ -641,7 +569,6 @@
 		        scope:$scope
 		    });
         };
-        // var CapturePicCtrl = function ($scope, $modalInstance) {
 
     	var _video = null,
     		patData = null;
@@ -653,9 +580,7 @@
 
 	    $scope.patOpts = {x: 0, y: 0, w: 25, h: 25};
 
-	    // Setup a channel to receive a video property
-	    // with a reference to the video element
-	    // See the HTML binding in main.html
+	   
 	    $scope.channel = {};
 
 	    $scope.webcamError = false;
@@ -668,7 +593,6 @@
 	    };
 
 	    $scope.onSuccess = function () {
-	        // The video element contains the captured camera data
 	        _video = $scope.channel.video;
 	        $scope.$apply(function() {
 	            $scope.patOpts.w = _video.width;
@@ -678,13 +602,9 @@
 	    };
 
 	    $scope.onStream = function (stream) {
-	        // You could do something manually with the stream.
 	    };
 
 
-	    /**
-	     * Make a snapshot of the camera data and show it in another canvas.
-	     */
 	    $scope.makeSnapshot = function makeSnapshot() {
 	        if (_video) {
 	            var patCanvas = document.querySelector('#snapshot');
@@ -759,7 +679,6 @@
 				"Address Line2":""
 			}
 
-			/** Update Client Details **/
 			$http({
 				url: $scope.url + "datatables/Official/" + $scope.clientDetails.clientId + "?genericResultSet=true&tenantIdentifier=default&pretty=true",
 				method: "POST",
@@ -788,7 +707,6 @@
 
 		$scope.proceedEight = function() {
 
-			// email send before redirect to last session
 			$scope.emailContent = {
 				"email" : $scope.jsonData.emailAddress
 			};
@@ -817,7 +735,6 @@
 
 		$scope.loanCreated = function() {
 
-			/** Update Client Details **/
 			$http({
 				url: $scope.url + "clients/" + $scope.getClientId + "?tenantIdentifier=default&pretty=true",
 				method: "PUT",
