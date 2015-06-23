@@ -97,7 +97,6 @@
 						<div class="form-group">
 							<label class="control-label" for="dob">DOB *</label>
 							<input type="text" class="form-control input-lg" ng-model="mustBeTeen" autoclose="true" data-date-format="dd MMMM yyyy" name="date" placeholder="01 January 2000" bs-datepicker>
-							<!-- <input type="text" ng-model="jsonData.dateOfBirth" name="dob" id="dob" class="form-control input-lg" placeholder="dd/mm/yyyy" tabindex="3"> -->
 							<div class="alert alert-danger" style="background-color:#FF4B4B" ng-if="dobErr">
 	                        	<p style="color:#fff">{{dobErr}}</p>
 	                        </div>
@@ -105,9 +104,6 @@
 						<div class="form-group">
 							<label class="control-label" for="email">Email</label>
 							<input type="text" ng-model="jsonData.emailAddress" name="email" id="email" class="form-control input-lg" placeholder="xyz@xyz.com" tabindex="4">
-							<!-- <div class="alert alert-danger" style="background-color:#FF4B4B" ng-if="dobErr">
-	                        	<p style="color:#fff">{{emailErr}}</p>
-	                        </div> -->
 						</div>
 						<div class="form-group" style="margin-bottom: 30px;">
 							<label class="control-label" for="mobile">Mobile No</label>
@@ -148,10 +144,6 @@
 								</div>
 							</div>
 						</div>
-						<!-- <div class="form-group" style="margin-bottom: 30px;">
-							<label class="control-label" for="mobile">Mobile No *</label>
-							<input type="text" name="mobile" id="mobile" class="form-control input-lg" placeholder="Enter Your 10 digit Mobile number" tabindex="4">
-						</div> -->
 						<div class="row" style="background:#586272;margin:0 -25px;border-bottom-left-radius: 6px;border-bottom-right-radius: 6px;">
 							<div class="col-xs-12 col-md-12 text-center" style="padding-right: 0;padding-left: 0;box-shadow: 5px 0 4px -5px rgba(0, 0, 0, 0.37),-5px 0 4px -5px rgba(0, 0, 0, 0.37);">
 								<div class="col-md-6">
@@ -170,77 +162,9 @@
 				<div id="chosenOne" class="col-md-10 col-sm-12 col-xs-12 col-md-offset-1 col-sm-offset-0 xs-offset-0 hide" style="background : #fff;border-radius: 6px;padding:25px 25px 0 25px;box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.37);">
 					<form role="form" method="post">
 						<div class="row" style="padding-bottom: 25px;">
-							<!-- <div class="col-md-12">
-								<div class="row" id="chooseLo">
-									<div class="col-md-4 col-xs-12 text-center" style="padding:0">
-										<a id="igold" style="display:block;background-color: gold;padding: 20px;font-weight:bold;text-decoration:none;color:#fff;cursor:pointer">Gold</a>
-									</div>
-									<div class="col-md-4 col-xs-12 text-center" style="padding:0">
-										<a id="imotor" style="display:block;background-color: #72C8FA;padding: 20px;font-weight:bold;text-decoration:none;color:#fff;cursor:pointer">Two Wheeler</a>
-									</div>
-									<div class="col-md-4 col-xs-12 text-center" style="padding:0">
-										<a id="imsme" style="display:block;background-color: #71DAA2;padding: 20px;font-weight:bold;text-decoration:none;color:#fff;cursor:pointer">MSME</a>
-									</div>
-								</div>
-							</div> -->
-							<!-- <div class="col-md-12" style="margin-top:30px;" id="relGold">
-								<h3 class="text-center" style="margin-bottom: 20px;color:#8A92A1"><b class="gL">Gold Loan</b></h3>
-								<div class="row">
-									<div class="form-group">
-										<label class="control-label" for="estg">Product *</label>
-										<div class="radio">
-										  <label>
-										    <input type="radio" name="prod" id="emi" ng-model="percenta" value="emiPer">EMI <b ng-show="percenta == 'emiPer'">15 %</b>
-										  </label>
-										  <label style="margin-left:15px;">
-										    <input type="radio" name="prod" id="tln" ng-model="percenta" value="termLoan">Term Loan <b ng-show="percenta == 'termLoan'">24 %</b>
-										  </label>
-										</div>
-									</div>
-									<div class="form-group">
-										<label class="control-label" for="estg">Estimated Gold Value *</label>
-										<p id="ires" class="form-control-static">{{esgol}}</p>
-									</div>
-									<div class="form-group">
-										<label class="control-label" for="estrng">Estimate Range</label>
-										<div range-slider min="0" max="300000" model-max="esgol" pin-handle="min"></div>
-										<div range-slider min="0" max="300000" model-max="esgol" pin-handle="min"></div>
-										model-min="demo6.min" model-max="demo6.max"
-									</div>
-									<div class="form-group">
-										<label class="control-label" for="tor">Tenor * <small>(in months)</small></label>
-										<select name="" id="" class="form-control input-lg" style="padding: 0 16px;">
-											<option value="12">12 Months</option>
-											<option value="18">18 Months</option>
-											<option value="24">24 Months</option>
-											<option value="36">36 Months</option>
-											<option value="48">48 Months</option>
-										</select>
-									</div>
-									<div class="form-group">
-										<label class="control-label" for="estg">When do you want it *</label>
-										<select class="form-control input-lg" name="" id="" style="padding: 0 16px;">
-											<option value="">Today</option>
-											<option value="">Within a Week</option>
-										</select>
-									</div>
-									<div class="form-group">
-										<label class="control-label" for="ires">Interest * </label>
-										<p id="ires" class="form-control-static">12323</p>
-									</div>
-								</div>
-							</div> -->
 							<div class="col-md-12" style="margin-top:30px;" id="relWheel">
 								<h3 class="text-center" style="margin-bottom: 20px;color:#8A92A1"><b class="tW">Two Wheeler Loan</b></h3>
 								<div class="row">
-									<!-- <div class="form-group">
-										<label class="control-label" for="estg">Product *</label>
-										<div class="radio">
-										  <label>
-										    <input type="radio" name="prod" id="emi">EMI
-										  </label>
-										</div>
-									</div> -->
 									<div class="form-group">
 										<label class="control-label" for="estg">Cost of bike(on road) *</label>
 										<p id="ires" class="form-control-static">{{esgol}}</p>
@@ -257,7 +181,6 @@
 										<select class="form-control input-lg" style="padding: 0 16px;" ng-model="defMonth" ng-change="tenorIn(defMonth)" ng-options="month.name for month in monthsLs">
 											<option value="">Select Months</option>		
 										</select>
-										<!-- <select class="form-control input-lg" style="padding: 0 16px;" ng-init="somethingHere = options[0]" ng-model="noPayment" ng-change="createNewLoan(noPayment)"> -->
 									</div>
 									<div class="form-group">
 										<label class="control-label" for="estg">When do you want it *</label>
@@ -265,70 +188,13 @@
 											<option value="">When do you want?</option>
 										</select>
 									</div>
-									<!-- <div class="form-group">
-										<label class="control-label" for="ires">Interest * </label>
-										<p id="ires" class="form-control-static">{{abinterest}}</p>
-									</div> -->
 									<div class="form-group">
 										<label class="control-label" for="wibike">Which bike * </label>
 										<select class="form-control input-lg" ng-model="selectBike" style="padding: 0 16px;" ng-options="bike.name for bike in bikeType"></select>
 									</div>
 								</div>
 							</div>
-							<!-- <div class="col-md-12 hide" style="margin-top:30px;" id="relMsme">
-								<h3 class="text-center" style="margin-bottom: 20px;color:#8A92A1"><b class="mS">MSME Loan</b></h3>
-								<div class="row">
-									<div class="form-group">
-										<label class="control-label" for="estg">Product *</label>
-										<div class="radio">
-										  <label>
-										    <input type="radio" name="prod" id="emi" ng-model="mspercenta" value="msemiPer">EMI <b ng-if="mspercenta == 'msemiPer'">15 %</b>
-										  </label>
-										  <label style="margin-left:15px;">
-										    <input type="radio" name="prod" id="tln" ng-model="mspercenta" value="mstermLoan">Term Loan <b ng-if="mspercenta == 'mstermLoan'">24 %</b>
-										  </label>
-										</div>
-									</div>
-									<div class="form-group">
-										<label class="control-label" for="estg">Amount *</label>
-										<p id="ires" class="form-control-static">12323</p>
-									</div>
-									<div class="form-group">
-										<label class="control-label" for="tor">Tenor * <small>(in months)</small></label>
-										<select name="" id="" class="form-control input-lg" style="padding: 0 16px;">
-											<option value="12">12 Months</option>
-											<option value="18">18 Months</option>
-											<option value="24">24 Months</option>
-											<option value="36">36 Months</option>
-											<option value="48">48 Months</option>
-										</select>
-									</div>
-									<div class="form-group">
-										<label class="control-label" for="estrng">Estimate Range</label>
-										<div range-slider min="0" max="300000" model-max="esgol" pin-handle="min"></div>
-									</div>
-									<div class="form-group">
-										<label class="control-label" for="estg">When do you want it *</label>
-										<select class="form-control input-lg" name="" id="" style="padding: 0 16px;">
-											<option value="">Today</option>
-											<option value="">Within a Week</option>
-										</select>
-									</div>
-									<div class="form-group">
-										<label class="control-label" for="ires">Interest * </label>
-										<p id="ires" class="form-control-static">12323</p>
-									</div>
-									<div class="form-group">
-										<label class="control-label" for="ecv">Estimated Property Value(Collateral) </label>
-										<input type="text" name="ecv" id="ecv" class="form-control input-lg" tabindex="3">
-									</div>
-								</div>
-							</div> -->
 						</div>
-						<!-- <div class="form-group" style="margin-bottom: 30px;">
-							<label class="control-label" for="mobile">Mobile No *</label>
-							<input type="text" name="mobile" id="mobile" class="form-control input-lg" placeholder="Enter Your 10 digit Mobile number" tabindex="4">
-						</div> -->
 						
 						<div class="row" style="background:#586272;margin:0 -25px;border-bottom-left-radius: 6px;border-bottom-right-radius: 6px;">
 							<div class="col-xs-12 col-md-12 text-center" style="padding-right: 0;padding-left: 0;box-shadow: 5px 0 4px -5px rgba(0, 0, 0, 0.37),-5px 0 4px -5px rgba(0, 0, 0, 0.37);">
@@ -362,10 +228,6 @@
 								<label class="control-label">Are you interested?</label>
 							</div>
 						</div>
-						<!-- <div class="form-group" style="margin-bottom: 30px;">
-							<label class="control-label" for="mobile">Mobile No *</label>
-							<input type="text" name="mobile" id="mobile" class="form-control input-lg" placeholder="Enter Your 10 digit Mobile number" tabindex="4">
-						</div> -->
 						<div class="row" style="background:#586272;margin:0 -25px;border-bottom-left-radius: 6px;border-bottom-right-radius: 6px;">
 							<div class="col-xs-12 col-md-12 text-center" style="padding-right: 0;padding-left: 0;box-shadow: 5px 0 4px -5px rgba(0, 0, 0, 0.37),-5px 0 4px -5px rgba(0, 0, 0, 0.37);">
 								<div class="col-md-6">
@@ -392,8 +254,6 @@
 							<label class="control-label" for="dob">Upload PAN card *</label>
 							<button class="btn btn-default" ngf-select ng-model="files" style="display:block;font-size:18px"> Choose File </button>
 							<span>{{file.name}}</span>
-							<!-- <input type="file" id="file" class="uplBtn" ng-model="files" style="padding-left:0"> -->
-							<!-- ngf-select="" ng-model="files" ngf-multiple="true" -->
 						</div>
 						<div class="form-group">
 							<label class="control-label" for="email">KYC no</label>
@@ -407,7 +267,6 @@
 						</div>
 						<div class="form-group" style="margin-bottom: 30px;">
 							<label class="control-label" for="mobile">*Upload KYC</label>
-							<!-- to upload multiple files ngf-multiple="true" -->
 							<button class="btn btn-default" ngf-select ng-model="kycfiles" style="display:block;font-size:18px"> Choose File </button>
 							<span>{{kycDoc.name}}</span>
 						</div>
@@ -518,10 +377,6 @@
 								<label class="control-label">Eligibility Amount - {{eligibilityAmount}}</label>
 							</div>
 						</div>
-						<!-- <div class="form-group" style="margin-bottom: 30px;">
-							<label class="control-label" for="mobile">Mobile No *</label>
-							<input type="text" name="mobile" id="mobile" class="form-control input-lg" placeholder="Enter Your 10 digit Mobile number" tabindex="4">
-						</div> -->
 						<div class="row" style="background:#586272;margin:0 -25px;border-bottom-left-radius: 6px;border-bottom-right-radius: 6px;">
 							<div class="col-xs-12 col-md-12 text-center" style="padding-right: 0;padding-left: 0;box-shadow: 5px 0 4px -5px rgba(0, 0, 0, 0.37),-5px 0 4px -5px rgba(0, 0, 0, 0.37);">
 								<div class="col-md-6">
@@ -570,30 +425,6 @@
 			    </div>
 		</script>
 	</div>
-	<!-- <script type="text/javascript">
-	
-	(function(){
-	
-		// Stage2 tabs Change 
-		$('#igold').click(function() {
-			$('#relWheel').addClass('hide')
-			$('#relMsme').addClass('hide')
-			$('#relGold').removeClass('hide');
-		});
-		$('#imotor').click(function() {
-			$('#relGold').addClass('hide')
-			$('#relMsme').addClass('hide')
-			$('#relWheel').removeClass('hide');
-		});
-		$('#imsme').click(function() {
-			$('#relGold').addClass('hide')
-			$('#relWheel').addClass('hide')
-			$('#relMsme').removeClass('hide');
-		});
-	
-	})();
-	
-	</script> -->
 	<script type="text/javascript" src="js/webcam.min.js"></script>
 </body>
 </html>
