@@ -1,6 +1,5 @@
 <?php
 
-	//API URL.
 
 	$username = "mifos";
 	$password = "1234";
