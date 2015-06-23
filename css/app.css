@@ -149,64 +149,48 @@ video {
 .lap:after {
     background-color: #eaeaea;
 }
-/*  Set color for LAP LINE  */
 
 .lap-header {
     background-color: #eaeaea;
 }
-/*	Set background color for LAP HEADER  */
 
 .lap-title {
     color: #464646;
 }
-/*	Set color for LAP TITLE  */
 
 .lap-info {
     color: #a8a8a8;
 }
-/*	Set color for LAP INFO  */
-/*	end Lap  */
-/*	Current lap  */
 
 .lap.lap-now .lap-header {
     background-color: #72C8FA;
 }
-/*	Set background color for CURRENT LAP  */
 
 .lap.lap-now .lap-header.head-number {
     color: #fff;
 }
-/*	Set color for CURRENT LAP TEXT  */
 
 .lap.lap-now:after,
 .lap.lap-now:before {
     background-color: #72C8Fa;
 }
-/*	Set background color for CURRENT LAP LINE  */
-/*	end Current lap  */
-/*	Success lap  */
 
 .lap.lap-finish .lap-header {
     background-color: #6DD9AA;
 }
-/*	Set background color for SUCCESS LAP  */
 
 .lap.lap-finish .lap-header.head-number {
     color: #3c611b;
 }
-/*	Set color for SUCCESS LAP TEXT  */
 
 .lap.lap-finish:after,
 .lap.lap-finish:before {
     background-color: #6DD9AA;
 }
-/*	Set background color for SUCCESS LAP LINE  */
 
 .lap.lap-finish .lap-header:after {
     color: #6DD9AA;
 }
-/*  Set color for SUCCESS LAP ICON  */
-/* All Mobile Sizes (devices and browser) */
 
 @media only screen and (max-width: 767px) {
     .lap:before,
